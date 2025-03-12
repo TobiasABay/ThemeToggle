@@ -25,13 +25,15 @@ const HomePage: React.FC = () => {
                     }}
                 >
                     <ThemeToggle darkMode={darkMode} onToggle={handleToggle} />
-                    <Typography variant="h5">Welcome</Typography>
+                    <Typography sx={{color: "text.primary"}} variant="h5">Welcome</Typography>
                     <TextField label="Enter something" variant="outlined" fullWidth />
-                    <Box sx={{ display: "flex", gap: 1, bgcolor: "background.default" }}>
-                        <Button variant="outlined" color="secondary">Cancel</Button>
-                        <Button variant="contained" color="primary">Submit</Button>
+                    <Box sx={{ display: "flex", gap: 1, bgcolor: "background.paper" }}>
+                        <Button variant="contained" color="error">Error</Button>
+                        <Button variant="contained" color="warning">Warning</Button>
+                        <Button variant="contained" color="info">Secondary</Button>
+                        <Button variant="contained" color="success">Primary</Button>
                     </Box>
-                    <Typography>{darkMode ? "Dark Mode is ON" : "Light Mode is ON"}</Typography>
+                    <Typography sx={{color: "text.primary"}}>{darkMode ? "Dark Mode!" : "Light Mode!"}</Typography>
                 </Box>
             </Container>
         </ThemeProvider>
